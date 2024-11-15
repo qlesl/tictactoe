@@ -1,0 +1,85 @@
+body {
+    font-family: Tiny5, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #b7a4e0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 5px auto;
+    padding: 5px;
+    background: #8851c3;
+    border-radius: 1px;
+    border: 5px solid #3a0c4e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.player-inputs {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    width: 22%;
+    font-size: 1rem;
+    border: 1px solid #612885;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #612885;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.hidden {
+    display: none;
+}
+
+button:hover {
+    background-color: #3a0c4e;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px; /* Reduced gap between cells */
+    margin: 20px auto;
+    width: fit-content; /* Ensures the grid is compact */
+}
+
+.cell {
+    width: 92px; /* Adjusted width to make cells smaller */
+    height: 92px; /* Adjusted height to make cells smaller */
+    background: #a185de;
+    border: 3px solid #3a0c4e; /* Thinner border to bring cells closer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+    background: #a185de;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+}
